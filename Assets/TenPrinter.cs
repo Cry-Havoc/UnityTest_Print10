@@ -37,8 +37,14 @@ public class TenPrinter : MonoBehaviour {
 
 		if (outPutText.Length <= rowLength * maxNumberOfRows) {
 		
-			screenTextField.GetComponent<Text>().text = outPutText; 
+			screenTextField.GetComponent<Text> ().text = outPutText; 
 			
+		} else {
+
+			outPutText = outPutText.Substring(rowLength);
+
+			screenTextField.GetComponent<Text> ().text = outPutText; 
+
 		}
 
 	}
